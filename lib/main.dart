@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shared_todolist/core/generated/l10n.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:shared_todolist/generated/l10n.dart';
+import 'package:shared_todolist/core/injector.dart';
 import 'package:shared_todolist/core/routes.dart';
 
-void main() {
+void main() async {
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await AppInjector().initializeDependencies();
+
   runApp(const SharedTodolist());
 }
 

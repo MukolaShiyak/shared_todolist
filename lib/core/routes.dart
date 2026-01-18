@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shared_todolist/src/splash_screen/splash_screen.dart';
+import 'package:shared_todolist/core/splash_screen.dart';
+import 'package:shared_todolist/features/auth/presentation/screens/sign_in_screen.dart';
 
 class Routes {
   static const splash = '/';
+  static const signIn = '/signIn';
   static const home = '/home';
 
   Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
@@ -12,6 +14,9 @@ class Routes {
     switch (routeName) {
       case splash:
         return pageRouteBuilder(const SplashScreen(), routeName);
+
+      case signIn:
+        return pageRouteBuilder(const SignInScreen(), routeName);
 
       // case home:
       //   return pageRouteBuilder(const Home(), routeName);
