@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shared_todolist/generated/l10n.dart';
-import 'package:shared_todolist/routes.dart';
+import 'package:shared_todolist/core/generated/l10n.dart';
+import 'package:shared_todolist/core/routes.dart';
 
 void main() {
   runApp(const SharedTodolist());
