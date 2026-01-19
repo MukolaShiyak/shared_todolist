@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_todolist/core/splash_screen.dart';
 import 'package:shared_todolist/features/auth/presentation/screens/sign_in_screen.dart';
+import 'package:shared_todolist/features/home/presentation/screens/home_screen.dart';
 
 class Routes {
   static const splash = '/';
@@ -18,8 +19,8 @@ class Routes {
       case signIn:
         return pageRouteBuilder(const SignInScreen(), routeName);
 
-      // case home:
-      //   return pageRouteBuilder(const Home(), routeName);
+      case home:
+        return pageRouteBuilder(const HomeScreen(), routeName);
 
       default:
         return null;
